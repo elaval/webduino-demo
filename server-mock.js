@@ -1,4 +1,4 @@
-var webduino = require('../webduino/lib/webduino');
+var webduino = require('webduino');
 var webduinoApp = webduino({test:true});
 
 var server = webduinoApp.server();
