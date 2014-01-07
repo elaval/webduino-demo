@@ -165,9 +165,9 @@ Backduino.views.LabLed = Backbone.View.extend({
 
 	toggle: function() {
 		if (this.model.get("on")) {
-			this.model.set("on", false);
+			this.model.turnoff();
 		} else {
-			this.model.set("on", true)
+			this.model.turnon();
 		}				
 	},
 
