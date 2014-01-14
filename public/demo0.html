@@ -56,6 +56,7 @@
 		<div class="row" id="content">
 		</div>
 
+
 		<div class="row" id="footer"></div>
 
 	</div>
@@ -71,6 +72,8 @@
 		</div>
 		<div class="row leds"></div>
 
+		<div class="row servo"></div>
+
 	</script>
 
 	<script type="text/template" id="Led_template">
@@ -78,7 +81,7 @@
 		  <div class="panel-heading"><%= label %></div>
 		  <div class="panel-body">
 			<div class="row">
-				<img width="20px" src="/img/light<%= state%>.png">
+				<img width="20px" height="40px" src="/img/light<%= state%>.png">
 			</div>
 			<div class="row">
 				<%= state %>
@@ -93,6 +96,20 @@
 		  <div class="panel-heading"><%= label %></div>
 		  <div class="panel-body">
 		    <%= value %>
+		  </div>
+		</div>
+
+	</script>
+
+	<script type="text/template" id="Servo_template">
+
+		<div class="panel panel-primary text-center">
+		  <div class="panel-heading">Servo</div>
+		  <div class="panel-body">
+			<div class="row" id="range"> 
+				Control servo motor: <br>
+				<input type="range" class="servo col-sm-12" min="0" max="180" value="0" >
+			</div>
 		  </div>
 		</div>
 

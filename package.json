@@ -8,6 +8,7 @@
     "email": "ernesto.laval@gmail.com"
    },
    "dependencies": {
-      "webduino": "*"
+      "webduino": "0.0.5",
+      "firebase": "*"
    }
 }

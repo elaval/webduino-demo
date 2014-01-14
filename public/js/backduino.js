@@ -189,5 +189,42 @@ Backduino.Sensors = Backbone.Collection.extend({
 	}
 })
 
+/* ---------------------------------*/
+/*				SERVOS  				*/
+/* ---------------------------------*/
+Backduino.models.Servo = Backbone.Model.extend({
+	url: function() {
+		return Backduino.baseurl+"/api/servos/"+this.id;
+	},
 
+	to: function(angle) {
+		this.set("to", angle);
+		this.save();
+	}
+}) 
+
+Backduino.Servos = Backbone.Collection.extend({
+	model: Backduino.models.Servo,
+
+	initialize : function(models, options) {
+		if (options && options.socket) this.socket(options.socket);
+	},
+
+	socket : function(socket) {
+		var self = this;
+
+		// Update sensor data when a new sample is received from the socket
+		socket.on("servo", function(data) {
+			var id = data.id;
+			
+			if (self.get(id)) {
+				self.get(id).set(data);
+			}
+		})
+	},
+
+	url: function() {
+		return Backduino.baseurl+"/api/servos";
+	}
+}) 
 
