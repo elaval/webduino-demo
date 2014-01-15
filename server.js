@@ -14,13 +14,13 @@ var server = webduinoApp.server();
 var PORT = 8000;
 
 var firebaseRoot = 'https://uk.firebaseio.com/webduino';
-var user = "elaval";
+var userid = "elaval";
 var boardName = "Tarjeta de Prueba 1";
 
 webduinoApp.on("ready", function() {
 
   // Create a channel for 2 way communication with FireBase Board Model
-  var channelFireBase = require("./channelFirebase").Create({'firebase': firebaseRoot+"/"+user+"/"+boardName});
+  var channelFireBase = require("./channelFirebase").Create({'firebase': firebaseRoot+"/"+userid+"/"+boardName});
   webduinoApp.addChannel(channelFireBase);
 	
   // On board ready, start listening for http requests
