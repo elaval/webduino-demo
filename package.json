@@ -1,14 +1,14 @@
 {
    "name": "webduino-demo",
    "description": "Demo program for using webduino REST API for Arduino",
-   "version": "0.0.2",
+   "version": "0.0.3",
    "homepage": "https://github.com/elaval/webduino-demo",
    "author": {
     "name": "Ernesto Laval <ernesto.laval@gmail.com>",
     "email": "ernesto.laval@gmail.com"
    },
    "dependencies": {
-      "webduino": "0.0.6",
+      "webduino": "0.0.7",
       "firebase": "*"
    }
 }
